@@ -71,10 +71,10 @@ class RestaurantTest {
         selectedItems.add("Vegetable lasagne");
         int orderTotal = restaurant.calculate_order_total(selectedItems);
 
-        List<Item> menu = restaurant.getMenu();
         int expectedTotal = 0;
-        for(Item menuItem: menu){
-            if(Objects.equals(menuItem.getName(), "Sweet corn soup") || Objects.equals(menuItem.getName(), "Vegetable lasagne")){
+        List<Item> menu = restaurant.getMenu();
+        for(Item menuItem: menu) {
+            if (menuItem.getName().equals("Sweet corn soup") || menuItem.getName().equals("Vegetable lasagne")) {
                 expectedTotal += menuItem.getPrice();
             }
         }
